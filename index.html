@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Floating widget</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+     integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" 
+rel="stylesheet">
+
+</head>
+<body>
+   <div class="navigation active">
+    <div class="toggle">
+      <div class="heart">
+        <i class="fa fa-heartbeat"></i>
+      </div>
+      
+    </div>
+    <ul>
+        <li>
+          <div class="typing animate"></div>
+          
+              <br>
+        </li>
+        
+        <li>
+          <div class="quote">
+            <q><b>You dont't have to struggle in silence</b></q>
+    
+          </div>
+          <br>
+        </li>
+        
+        <li>
+            <div class="chat">
+            <a href="#"><span><i class="fa fa-comment"></i></span>Chat</a>
+            </div>
+        </li>
+    </ul>    
+       
+   </div> 
+   <script>
+       const navigation=document.querySelector('.navigation');
+       document.querySelector('.toggle').ondblclick =function(){
+           this.classList.toggle('active');
+           navigation.classList.toggle('active')
+       }
+   </script>
+   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+   <script>
+   $( function() {
+     $( ".navigation" ).draggable();
+   } );
+   </script>
+</body>
+</html>

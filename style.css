@@ -1,0 +1,228 @@
+@import url('https://fonts.googleappis.com/css?family=Poppins:200,300,400,500,600,700,800,900& display=swap');
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+.navigation{
+    position: relative;
+    width: 50px;
+    height:50px ;
+    background: #fff;
+    transition: width 0.5s, height 0.5s;
+    transition-delay: 0s,0.75s;
+    z-index: 100000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.navigation.active
+{
+ padding-left: 1px;
+ padding-top: 2px;
+ width: 350px;
+ height: 200px;
+ transition: height 0.5s, width 0.5s;
+ transition-delay: 0s,0.75s;
+}
+
+.navigation .toggle{
+    position: relative;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #d3094c;
+    color: #fff;
+    transition: 0.5s;
+    cursor: default;
+    filter:hue-rotate(0deg);
+    color:linear-gradient(45deg,#0f8,#08f);
+    animation:hue 10000ms infinite linear;
+}
+.navigation .toggle .heart{
+    padding-right: 10px;
+}
+.navigation .toggle i{
+    font-weight: 100;
+    font-size: 2em;
+}
+.navigation .toggle.active{
+    background: #2196f3;
+}
+
+
+.navigation .toggle::before{
+content: "";
+position: absolute;
+font-size: 2em;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 50px;
+height: 50px;
+color: #fff;
+font-weight: 500;
+transition: 0.5s;
+}
+.navigation .toggle.active::before{
+    transform: rotate(360deg);
+    filter:hue-rotate(0deg);
+    color:linear-gradient(45deg,#0f8,#08f);
+    animation:hue 10000ms infinite linear;
+}
+
+.navigation ul {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+ padding-top: 2px;
+padding-left: 4px;
+padding-right: 4px;
+list-style: none;
+width: 100%;
+position: relative;
+}
+/*.navigation ul li p{
+    position: relative;
+   font-family: 'Fredoka',sans-serif;
+   display: block;
+   width: 100%;
+   text-decoration: none;
+   text-align: center;
+   color: #0a0a0ae1;
+
+}*/
+.navigation ul li .typing.animate {
+    width: 10ch;
+    border-right: 0.1em solid black;
+    font-family: monospace;
+    font-size: 1.2em;
+    animation: type 2.5s steps(20), writer 1s infinite alternate, delete 0.5s steps(5) 2.5s, type2 1s steps(4) 3s forwards,
+     type3 3s steps(22, end) 6s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .typing.animate::before { 
+    content: "Hello I'm Christine";
+    animation: type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+  }
+  
+  @keyframes type {
+    from {
+      width: 0;
+    }
+    to {
+      width: 21ch;
+    }
+  }
+  
+  @keyframes type2 {
+    from {
+      width: 16ch;
+      content: "Hello I'm Chrissy."
+    }
+    to {
+      width: 20ch;
+      content: "Hello I'm Chrissy."
+    }
+  }
+  
+  @keyframes type3 {
+    from {
+      width: 20ch;
+      content: " Hello I'm Chrissy.Your health assistant!"
+    }
+    to {
+      width: 42ch;
+      content: " Hello I'm Chrissy.Your health assistant!"
+    }
+  }
+  
+  @keyframes writer {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes delete {
+    from {
+      width: 21ch;
+    }
+    to {
+      width: 16ch;
+    }
+  }
+.navigation ul li a{
+  text-align: center;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.navigation ul li .chat{
+padding: 15px;
+width: 100px;
+height: 50px;
+margin-left: 110px;
+margin-top: 5px;
+border: 2px rgba(15, 54, 228, 0.822);
+border-radius: 4px;
+text-align: center;
+
+background-color: #d3094c;
+filter:hue-rotate(0deg);
+    color:linear-gradient(45deg,#0f8,#08f);
+    animation:hue 10000ms infinite linear;
+
+}
+.navigation ul li .quote{
+ padding-left: 20px;
+}
+.navigation ul li a:hover{
+    color:#2196f3
+}
+@keyframes spinify {
+  0% {
+    transform: translate(0px,0px);
+    
+  }
+  33% {
+    transform: translate(0px,24px);
+    border-radius:100%;
+    width:10px;
+    height:10px;
+ 
+  }
+   66% {
+    transform:translate(0px,-16px);
+  }
+  
+   88% {
+    transform:translate(0px,4px);
+     
+  }
+  100% {
+    transform:translate(0px,0px);
+  }
+}
+@keyframes hue{
+  0%{filter: hue-rotate(0deg);}
+  100%{filter:hue-rotate(360deg);}
+  
+}
